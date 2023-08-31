@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int num = 5;
-        long factorial = fact(num);
-        System.out.println(num + " sayısının faktoriyeli: " + factorial);
+
+
+        komb(10,5);
+
 
     }
 
@@ -19,7 +20,15 @@ public class Main {
             return 1;
         }
 
+    }
 
+    public static void komb(int n,int r){
+        long nFact = fact(n);
+        long rFact = fact(r);
+        long nEksiRFact = fact(n-r);
+        long combination = nFact/(rFact*(nEksiRFact));
+
+        System.out.println(combination);
     }
 
 
